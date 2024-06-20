@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import Card from 'react-bootstrap/Card';
 import './App.css';
+import Container from 'react-bootstrap/Container';
+import Name from './components/Name';
+import Image from './components/Image';
+import Description from './components/Description';
+import Price from './components/Price';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container className='mt-10'>
+        <Card>
+          <Card.Img variant="top" src="https://c1.neweggimages.com/ProductImageCompressAll1280/34-269-132-V04.jpg" width={151}
+            height={580} />
+          <Card.Body>
+
+            <Name />
+            <Description />
+            <Price />
+          </Card.Body>
+        </Card>
+      </Container>
+
+    </>
   );
 }
 
